@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Genshin check-in
+name: Check-in
 
 on:
   # Allow manual start
@@ -15,14 +15,8 @@ jobs:
     steps:
     - uses: ahmubashshir/genshin-check-in@master
       with:
-        # MiHoYo Account ID, required.
-        id:    ${{ secrets.MHYACID }}
-        # MiHoYo UUID, required.
-        uuid:  ${{ secrets.MHYUUID }}
-        # Auth Token, required.
-        token: ${{ secrets.MHYTOKEN }}
-        # Server name(append os_ before server name so that asia becomes
-        # os_asia)
-        region: ${{ secrets.REGION }}
-        # Server UID
-        uid: ${{ secrets.REGIONAL_UID }}
+        id:     ${{ secrets.MHYACID }}
+        uuid:   ${{ secrets.MHYUUID }}
+        token:  ${{ secrets.MHYTOKEN }}
+        region: ASIA
+# vim: ft=yaml:ts=2:et:
